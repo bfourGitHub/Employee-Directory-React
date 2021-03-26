@@ -22,22 +22,19 @@ function Body({ employees, search }) {
             .map((employee, index) => ( 
                 // Place holder employee.~ ... 
                 <Card style={{ maxWidth: '22rem', margin:"2rem", borderRadius:"8px", fontFamily:"'Montserrat', sans-serif" }}>
+
                     <Card.Body>
-                    <Card.Img variant="top" src={employee.picture} />
-                        <Card.Title>{employee.name.first} {employee.name.last}</Card.Title>
-                        <Card.Text>
-                            {employee.description}
-                    </Card.Text>
+                        <Card.Img variant="top" src={employee.picture.large} />
+                        <Card.Title>{employee.name.first} {employee.name.last}</Card.Title>                        
                     </Card.Body>
+                    
                     <ListGroup className="list-group-flush">
                         <ListGroupItem>Email: {employee.email}</ListGroupItem>
-                        <ListGroupItem>Phone: {employee.phoneNumber}</ListGroupItem>
-                        <ListGroupItem>{employee.location}</ListGroupItem>
+                        <ListGroupItem>Phone: {employee.phone}</ListGroupItem>
+                        <ListGroupItem>Cell: {employee.cell}</ListGroupItem>
+                        <ListGroupItem>{employee.location.city}, {employee.location.state}, {employee.location.country}</ListGroupItem>
                     </ListGroup>
-                    {/* <Card.Body>
-                        <Card.Link href="#">Card Link</Card.Link>
-                        <Card.Link href="#">Another Link</Card.Link>
-                    </Card.Body> */}
+                    
                 </Card>
                 ))}
             </div>
