@@ -7,6 +7,7 @@ import Header from '../components/Header';
 import Filters from '../components/Filters';
 import Footer from '../components/Footer';
 import Title from '../components/Title';
+import Image from '../components/Image';
  
 
 
@@ -41,6 +42,7 @@ function Directory () {
 
         <div className="directory">
             <Header />
+            <Image />
             <Filters handleInputChange={handleInputChange} />
             <Title />
             <Body employees={employees} search={search}  />
