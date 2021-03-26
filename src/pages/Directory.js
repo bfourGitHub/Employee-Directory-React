@@ -6,6 +6,7 @@ import Body from '../components/Body';
 import Header from '../components/Header';
 import Filters from '../components/Filters';
 import Footer from '../components/Footer';
+import Title from '../components/Title';
  
 
 
@@ -21,9 +22,9 @@ function Directory () {
         getEmployees();
     }, []);
 
-    function getEmployees() {
+    const getEmployees = () => {
 
-        API.getEmployees().then((res) => setEmployees(res.data.results))
+        API.getEmployeeList().then((res) => setEmployees(res.data.results));
             
     };
 
@@ -41,7 +42,8 @@ function Directory () {
         <div className="directory">
             <Header />
             <Filters handleInputChange={handleInputChange} />
-            <Body employees={employees} search={search}/>
+            <Title />
+            <Body employees={employees} search={search}  />
             <Footer />
         </div>
     )
