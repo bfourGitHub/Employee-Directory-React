@@ -1,25 +1,41 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Body from './components/Body';
+import Filters from './components/Filters';
+import Header from './components/Header';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  state = {
+    users: "", // Return from API call would pass in here. THEN its passed to the component below.
+    search: "" //
+  };
+
+  handleInputChange = event => {
+    //Getting the value and name of the input which triggered the change
+    const { name, value } = event.target;
+
+    // Updating the input's state
+    this.setState({
+      [name]: value
+    });
+  };
+
+  render() {
+
+    return (
+
+      <div className="App">
+        <Header />
+        <Filters handleInputChange={this.handleInputChange} />
+        {this.state.search}
+        <Body users={this.state.users} search={this.state.search} />
+
+      </div>
+
+    );
+  }
 }
 
 export default App;
