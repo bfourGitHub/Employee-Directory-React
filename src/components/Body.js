@@ -1,9 +1,5 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-// import { Card } from 'react-bootstrap';
-// import { ListGroup, ListGroupItem } from 'react-bootstrap';
-// import { Container } from 'react-bootstrap';
-// import logo from "../logo.svg";
 
 
 function Body({ employees, search }) {

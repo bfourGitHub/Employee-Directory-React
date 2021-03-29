@@ -35,7 +35,8 @@ function Directory () {
         setSearch( value );
     };
     
-    const [sortBy, setSortBy] = useState("");  
+    const [sortBy, setSortBy] = useState("");
+     
     //Buttons for selecting a sort situation
     function handleSortBtnFirstNameAZ (az) {
         setSortBy(az);
@@ -73,7 +74,6 @@ function Directory () {
 
         // Add onclick to Filters to passes button info/event 
         //get onClick working... console log a value... then sort the array to update EMPLOYEES
-        // sort use the googles.
         <div className="directory">
             <Header />
             <Image />

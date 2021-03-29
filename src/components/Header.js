@@ -7,7 +7,6 @@ function Header() {
 
     return (
 
-        // <p>Hello Bryan.</p>
         <Container >
             <Jumbotron fluid bg="dark" style={{ borderRadius:"8px", backgroundColor:"darkslategrey", color:"white", fontFamily:"'Montserrat', sans-serif" }}>
                 <Container>
